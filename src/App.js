@@ -2,14 +2,31 @@ import './App.css';
 import { Container, Jumbotron, Row, Col } from 'react-bootstrap';
 import Navigation from './components/Navigation';
 import Section from './components/Section';
+import SummaryContent from './components/SummaryContent';
+import React from "react";
 
 const data = {
   navSections: [
-  "Summary"
-  ,"Experience"
-  ,"Expertise"
-  ,"Education"
-  ,"Contact Me"
+    {
+      name: "Summary",
+      component: SummaryContent 
+    },
+    {
+      name: "Experience",
+      component: "" 
+    },
+    {
+      name: "Expertise",
+      component: "" 
+    },
+    {
+      name: "Education",
+      component: "" 
+    },
+    {
+      name: "Contact Me",
+      component: "" 
+    },
   ]
 };
 
@@ -17,9 +34,10 @@ const App = () => (
   <Container>
     <Row>
       <Col>
-        <Navigation navSections={data.navSections}/>
+        <Navigation navSections={data.navSections.map(jo => jo.name)}/>
       </Col>  
     </Row>
+    {/* 
     <Row>
       <Col>
         <Jumbotron>
@@ -27,10 +45,13 @@ const App = () => (
         </Jumbotron>
       </Col>    
     </Row>
+    */}
     <Row>
       <Col>
-        {data.navSections.map(value => (
-					<Section sectionName={value}/>
+        { data.navSections.map(jo => (
+					<Section sectionName={jo.name}>
+            { jo.component && React.createElement(jo.component) }
+          </Section>
 					))
 				}
       </Col>
