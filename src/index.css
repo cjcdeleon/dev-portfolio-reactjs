@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.callout-info {
+    border-left-color: #1b809e;
+}
+.callout {
+    padding: 5px;
+    margin: 10px 0;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #1b809e;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+.callout-info h1 {
+  color: #1b809e;
+}
