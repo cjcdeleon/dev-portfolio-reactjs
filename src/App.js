@@ -3,6 +3,7 @@ import { Container, Jumbotron, Row, Col } from 'react-bootstrap';
 import Navigation from './components/Navigation';
 import Section from './components/Section';
 import SummaryContent from './components/SummaryContent';
+import ExperienceContent from './components/ExperienceContent';
 import React from "react";
 
 const data = {
@@ -13,7 +14,7 @@ const data = {
     },
     {
       name: "Experience",
-      component: "" 
+      component: ExperienceContent 
     },
     {
       name: "Expertise",

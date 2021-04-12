@@ -4,22 +4,22 @@ import { FcOvertime, FcCommandLine, FcBusiness, FcApproval, FcBullish } from "re
 
 const data = [
 	{
-		number: 11,
+		number: '11',
 		description: 'years as a Software Engineer',
 		iconClass: FcOvertime
 	},
 	{
-		number: 3,
+		number: '03',
 		description: '-tier developer (Java, SQL & JS)',
 		iconClass: FcCommandLine
 	},
 	{
-		number: 6,
+		number: '06',
 		description: 'key financial domain knowledge ',
 		iconClass: FcBullish
 	},
 	{
-		number: 4,
+		number: '04',
 		description: 'certs: AWS SAA, SCJP, SCWD, Spring 3 Professional',
 		iconClass: FcApproval
 	},
