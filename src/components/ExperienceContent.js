@@ -141,7 +141,7 @@ const generateArchivedExperienceItemEntry = () => {
 		if (i+1 < data.length) {
 			entries.push(<Row><Col sm={12} lg={6}><ExperienceItemEntry {...data[i]} /></Col><Col sm={12} lg={6}><ExperienceItemEntry {...data[i+1]} /></Col></Row>)
 		} else {
-    entries.push(<Row><Col sm={12} lg={6}><ExperienceItemEntry {...data[i]} /></Col><Col sm={12} lg={6} style={{textAlign: 'center', verticalAlign: 'center'}}><AiOutlineCheckSquare size='70'/>Wow you read all that, thanks.</Col></Row>)
+    entries.push(<Row><Col sm={12} lg={6}><ExperienceItemEntry {...data[i]} /></Col><Col sm={12} lg={6} style={{textAlign: 'center', verticalAlign: 'center'}}><AiOutlineCheckSquare size='70'/><p>Wow you read all that - thanks! <br/>You reached the end of the Experience section</p></Col></Row>)
 		}
 	}
 	return entries;
