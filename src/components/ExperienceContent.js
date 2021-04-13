@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Row, Col, Card, Button, Collapse, Image } from 'react-bootstrap';
-import { AiOutlineCluster, AiOutlineUser, AiOutlineCalendar, AiOutlineCalculator, AiOutlineEnvironment } from 'react-icons/ai';
+import { AiOutlineCluster, AiOutlineUser, AiOutlineCalendar, AiOutlineCalculator, AiOutlineEnvironment, AiOutlineCheckSquare } from 'react-icons/ai';
 import azeusLogo from '../images/azeus.png';
 import sunlifeLogo from '../images/sunlife.jfif';
 import macquarieLogo from '../images/macquarie.jfif';
@@ -141,7 +141,7 @@ const generateArchivedExperienceItemEntry = () => {
 		if (i+1 < data.length) {
 			entries.push(<Row><Col sm={12} lg={6}><ExperienceItemEntry {...data[i]} /></Col><Col sm={12} lg={6}><ExperienceItemEntry {...data[i+1]} /></Col></Row>)
 		} else {
-			entries.push(<Row><Col><ExperienceItemEntry {...data[i]} /></Col></Row>)
+    entries.push(<Row><Col sm={12} lg={6}><ExperienceItemEntry {...data[i]} /></Col><Col sm={12} lg={6} style={{textAlign: 'center', verticalAlign: 'center'}}><AiOutlineCheckSquare size='70'/>Thanks for reading.</Col></Row>)
 		}
 	}
 	return entries;
