@@ -10,11 +10,11 @@ import suncorpLogo from '../images/suncorp.png';
 
 const data = [
   {
-    "company":["Suncorp Group"],
+    "company":"Suncorp Group",
     "logo":suncorpLogo,
     "dates":["05/2019 - Present"],
     "lengths":["2years"],
-    "locations":["Sydney, Austrlia"],
+    "locations":"Sydney, Australia",
     "roles":"Software Engineer (w/ Devops)",
     "desc":"Building and continually enhancing Insurance Sales Apps to enable customers to get a quote and buy motor, home, health and business insurance. Finally for the first time in my career, able to use cool new tech stack: ReactJS + Redux, Groovy and Jenkins Pipeline, Ansible, AWS EC2/S3/Cloudformation and Openshift.",
     "highlights":  [
@@ -25,11 +25,11 @@ const data = [
     ]
   },
   {
-    "company":["ANZ Bank"],
+    "company":"ANZ Bank",
     "logo":anzLogo,
     "dates":["01/2017 - 05/2019"],
     "lengths":["11months"],
-    "locations":["Sydney, Austrlia"],
+    "locations":"Sydney, Australia",
     "roles": "Java SQL Vaadin Developer",
     "desc":"Worked on a Risk data aggregation + calculation web app built with Spring Boot partitioned as Microservices, SQL Server 2008, Java 8 and Vaadin 7 for UI.",
     "highlights":  [
@@ -40,11 +40,11 @@ const data = [
     ]
   },
   {
-    "company":["Tyro Payments"],
+    "company":"Tyro Payments",
     "logo":tyroLogo,
     "dates":["10/2017 - 11/2017"],
     "lengths":["1.5months"],
-    "locations":["Sydney, Austrlia"],
+    "locations":"Sydney, Australia",
     "roles":"Java Web Developer",
     "desc":"Took a huge risk & ventured the world of strict full-time pair-programming (wholeday, everyday). Unfortunately, full-time pairing took its toll and I was unable to perform at full capacity.",
     "highlights":  [
@@ -52,12 +52,12 @@ const data = [
       "got a short glimpse of the Payment domain and experienced albeit shortly, extreme Agile programming"
     ]
   },
-    {
-    "company":["Macquarie Group", "Macquarie Offshore Services"],
+  {
+    "company":"Macquarie Group",
     "logo":macquarieLogo,
     "dates":["04/2010 - 01/2016", "04/2016 - 10/2016"],
     "lengths":["5years 9months", "7months"],
-    "locations":["Makati City, Philippines", "Sydney, Austrlia"],
+    "locations":"Makati City, Philippines and Sydney, Australia",
     "roles": "Java SQL ExtJS Unix Developer",
     "desc":"Worked on Java Web apps developed with Spring, Hibernate, jQuery, ExtJS for Macquarie's risk management department. Over 6 years, primarily worked in Java however had exposure to a variety of technologies such as: maintaining legacy reports & jobs written in SQL + Unix, writing ad-hoc SQL scripts, integrating, customizing and deploying vendor products. Last project was a greenfield app for trade lifecycle reporting which was built on Spring Boot, Microservices, MarkLogic (NoSQL), ReactJS and Bootstrap.",
     "highlights":  [
@@ -70,11 +70,11 @@ const data = [
     ]
   },
   {
-    "company":["Sun Life Financial Philippines"],
+    "company":"Sun Life Financial Philippines",
     "logo":sunlifeLogo,
     "dates":["04/2007 - 04/2010"],
     "lengths":["3years"],
-    "locations":["Makati City, Philippines"],
+    "locations":"Makati City, Philippines",
     "roles":"Java Struts SQL Developer",
     "desc":"Worked as a Java, Web and SQL Developer who implemented business requirements that revolve in insurance domain. Primarily used Spring, Struts, Hibernate but also worked on maintaining legacy apps written in plain JSP + Servlets + JDBC and a Point-of-Sale (POS) payment gateway.",
     "highlights":  [
@@ -85,11 +85,11 @@ const data = [
     ]
   },
   {
-    "company":["Azeus Systems Philippines Ltd"],
+    "company":"Azeus Systems Philippines Ltd",
     "logo":azeusLogo,
     "dates":["06/2006 - 11/2006"],
     "lengths":["6months"],
-    "locations":["Ortigas City, Philippines"],
+    "locations":"Ortigas City, Philippines",
     "roles":"Junior Developer",
     "desc":"Worked as a Java Junior Developer under the tutelage of senior mentors for this CMMI Level-5 software firm",
     "highlights":  [
@@ -104,9 +104,10 @@ const ExperienceItemEntry = ({ company, logo, dates, lengths, locations, roles, 
 	return (
     <>
 		<Card border={borderType ? borderType : 'warning'}  style={{display: 'revert'}}>
-      <Card.Header>
-        <Image src={logo} style={{float: 'right'}}></Image>        
-        {company.map((c, index) => <p><AiOutlineCluster/>{c} - <AiOutlineEnvironment/>{locations[index]}</p>)}        
+      <Card.Header as="h5">
+        <Image src={logo} style={{float: 'right'}}></Image>
+        <p><AiOutlineCluster/>{company} - <AiOutlineEnvironment/>{locations}</p>
+                
       </Card.Header>
 			<Card.Body>
 				<Card.Title >          

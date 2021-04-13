@@ -1,4 +1,4 @@
-import { Navbar, Nav, Button, Badge } from 'react-bootstrap';
+import { Navbar, Nav, Button } from 'react-bootstrap';
 
 const Navigation = ({navSections}) => {
 	return (
@@ -6,8 +6,9 @@ const Navigation = ({navSections}) => {
 		<Navbar bg="dark" variant="dark" expand="lg">
 			{/* http://www.pinyin.info/tools/converter/chars2uninumbers.html */}
 			<Navbar.Brand href="#about">
-				<Button variant="primary">
-  					&#12459;&#12523;&#12525;&#12473; <Badge variant="light">&#30496;&#12356;&#38957;</Badge>
+				<Button variant="danger">
+  					{/*&#12459;&#12523;&#12525;&#12473; <Badge variant="light">&#30496;&#12356;&#38957;</Badge> */}
+					Carlos Jaime De Leon &#30496;&#12356;&#38957;
   				</Button>
 			</Navbar.Brand>
 			{/*<Navbar.Brand href="#about">carlos jaime de leon</Navbar.Brand>*/}
