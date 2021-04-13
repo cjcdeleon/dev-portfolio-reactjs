@@ -14,7 +14,7 @@ const data = [
     "logo":suncorpLogo,
     "dates":["05/2019 - Present"],
     "lengths":["2years"],
-    "locations":"Sydney, Australia",
+    "locations":"Australia",
     "roles":"Software Engineer (w/ Devops)",
     "desc":"Building and continually enhancing Insurance Sales Apps to enable customers to get a quote and buy motor, home, health and business insurance. Finally for the first time in my career, able to use cool new tech stack: ReactJS + Redux, Groovy and Jenkins Pipeline, Ansible, AWS EC2/S3/Cloudformation and Openshift.",
     "highlights":  [
@@ -29,7 +29,7 @@ const data = [
     "logo":anzLogo,
     "dates":["01/2017 - 05/2019"],
     "lengths":["11months"],
-    "locations":"Sydney, Australia",
+    "locations":"Australia",
     "roles": "Java SQL Vaadin Developer",
     "desc":"Worked on a Risk data aggregation + calculation web app built with Spring Boot partitioned as Microservices, SQL Server 2008, Java 8 and Vaadin 7 for UI.",
     "highlights":  [
@@ -44,7 +44,7 @@ const data = [
     "logo":tyroLogo,
     "dates":["10/2017 - 11/2017"],
     "lengths":["1.5months"],
-    "locations":"Sydney, Australia",
+    "locations":"Australia",
     "roles":"Java Web Developer",
     "desc":"Took a huge risk & ventured the world of strict full-time pair-programming (wholeday, everyday). Unfortunately, full-time pairing took its toll and I was unable to perform at full capacity.",
     "highlights":  [
@@ -57,7 +57,7 @@ const data = [
     "logo":macquarieLogo,
     "dates":["04/2010 - 01/2016", "04/2016 - 10/2016"],
     "lengths":["5years 9months", "7months"],
-    "locations":"Makati City, Philippines and Sydney, Australia",
+    "locations":"Philippines & Australia",
     "roles": "Java SQL ExtJS Unix Developer",
     "desc":"Worked on Java Web apps developed with Spring, Hibernate, jQuery, ExtJS for Macquarie's risk management department. Over 6 years, primarily worked in Java however had exposure to a variety of technologies such as: maintaining legacy reports & jobs written in SQL + Unix, writing ad-hoc SQL scripts, integrating, customizing and deploying vendor products. Last project was a greenfield app for trade lifecycle reporting which was built on Spring Boot, Microservices, MarkLogic (NoSQL), ReactJS and Bootstrap.",
     "highlights":  [
@@ -66,15 +66,15 @@ const data = [
       "awarded on November 2012 with 'RMG Awards: Delivery and Drive' for successfully leading / delivering a major development project on schedule even with understaffed team (3 members)",
       "awarded on May 2014 with 'RMG Awards: Client Commitment, Highest Standards, Delivery and Drive' for successfully implementing the IT solutions as envisioned by business users thereby realizing the efficiency gains in business process, if not going beyond expectations",
       "managed and deployed the upgrade of vendor application Actimize Risk Case Manager (RCM); it was highly successful as compared to previous upgrades which had numerous post production issues",
-      "member of the pioneer dev team for Sailpoint IIQ (IAM) that was deployed to Sydney, Australia for 5 months; assigned as lead customized reports and connector developer; success of this project paved to growth of hiring developers in Manila"
+      "member of the pioneer dev team for Sailpoint IIQ (IAM) that was deployed to  Australia for 5 months; assigned as lead customized reports and connector developer; success of this project paved to growth of hiring developers in Manila"
     ]
   },
   {
-    "company":"Sun Life Financial Philippines",
+    "company":"Sun Life Financial",
     "logo":sunlifeLogo,
     "dates":["04/2007 - 04/2010"],
     "lengths":["3years"],
-    "locations":"Makati City, Philippines",
+    "locations":"Philippines",
     "roles":"Java Struts SQL Developer",
     "desc":"Worked as a Java, Web and SQL Developer who implemented business requirements that revolve in insurance domain. Primarily used Spring, Struts, Hibernate but also worked on maintaining legacy apps written in plain JSP + Servlets + JDBC and a Point-of-Sale (POS) payment gateway.",
     "highlights":  [
@@ -89,7 +89,7 @@ const data = [
     "logo":azeusLogo,
     "dates":["06/2006 - 11/2006"],
     "lengths":["6months"],
-    "locations":"Ortigas City, Philippines",
+    "locations":"Philippines",
     "roles":"Junior Developer",
     "desc":"Worked as a Java Junior Developer under the tutelage of senior mentors for this CMMI Level-5 software firm",
     "highlights":  [
