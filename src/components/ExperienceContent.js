@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-import { Row, Col, Card, Button, Collapse } from 'react-bootstrap';
+import { Row, Col, Card, Button, Collapse, Image } from 'react-bootstrap';
 import { AiOutlineCluster, AiOutlineUser, AiOutlineCalendar, AiOutlineCalculator, AiOutlineEnvironment } from 'react-icons/ai';
+import azeusLogo from '../images/azeus.png';
+import sunlifeLogo from '../images/sunlife.jfif';
+import macquarieLogo from '../images/macquarie.jfif';
+import anzLogo from '../images/anz.jfif';
+import tyroLogo from '../images/tyro.png';
+import suncorpLogo from '../images/suncorp.png';
 
 const data = [
   {
     "company":["Suncorp Group"],
-    "logo":"data/suncorp_logo.png",
+    "logo":suncorpLogo,
     "dates":["05/2019 - Present"],
     "lengths":["2years"],
     "locations":["Sydney, Austrlia"],
@@ -20,7 +26,7 @@ const data = [
   },
   {
     "company":["ANZ Bank"],
-    "logo":"data/anz_logo.png",
+    "logo":anzLogo,
     "dates":["01/2017 - 05/2019"],
     "lengths":["11months"],
     "locations":["Sydney, Austrlia"],
@@ -34,8 +40,21 @@ const data = [
     ]
   },
   {
+    "company":["Tyro Payments"],
+    "logo":tyroLogo,
+    "dates":["10/2017 - 11/2017"],
+    "lengths":["1.5months"],
+    "locations":["Sydney, Austrlia"],
+    "roles":"Java Web Developer",
+    "desc":"Took a huge risk & ventured the world of strict full-time pair-programming (wholeday, everyday). Unfortunately, full-time pairing took its toll and I was unable to perform at full capacity.",
+    "highlights":  [
+      "recovered from this setback and persevered with my Java career",
+      "got a short glimpse of the Payment domain and experienced albeit shortly, extreme Agile programming"
+    ]
+  },
+    {
     "company":["Macquarie Group", "Macquarie Offshore Services"],
-    "logo":"data/macquarie_logo.png",
+    "logo":macquarieLogo,
     "dates":["04/2010 - 01/2016", "04/2016 - 10/2016"],
     "lengths":["5years 9months", "7months"],
     "locations":["Makati City, Philippines", "Sydney, Austrlia"],
@@ -51,21 +70,8 @@ const data = [
     ]
   },
   {
-    "company":["Tyro Payments"],
-    "logo":"data/tyro_logo.png",
-    "dates":["10/2017 - 11/2017"],
-    "lengths":["1.5months"],
-    "locations":["Sydney, Austrlia"],
-    "roles":"Java Web Developer",
-    "desc":"Took a huge risk & ventured the world of strict full-time pair-programming (wholeday, everyday). Unfortunately, full-time pairing took its toll and I was unable to perform at full capacity.",
-    "highlights":  [
-      "recovered from this setback and persevered with my Java career",
-      "got a short glimpse of the Payment domain and experienced albeit shortly, extreme Agile programming"
-    ]
-  },
-  {
     "company":["Sun Life Financial Philippines"],
-    "logo":"data/sunlife_logo.png",
+    "logo":sunlifeLogo,
     "dates":["04/2007 - 04/2010"],
     "lengths":["3years"],
     "locations":["Makati City, Philippines"],
@@ -80,7 +86,7 @@ const data = [
   },
   {
     "company":["Azeus Systems Philippines Ltd"],
-    "logo":"data/azeus_logo.png",
+    "logo":azeusLogo,
     "dates":["06/2006 - 11/2006"],
     "lengths":["6months"],
     "locations":["Ortigas City, Philippines"],
@@ -93,22 +99,14 @@ const data = [
   }
 ]
 
-const divStyle = {
-	WebkitTransition: 'all', // note the capital 'W' here
-	msTransition: 'all', // 'ms' is the only lowercase vendor prefix
-	position: 'relative',
-	padding: '75px',
-	zIndex: 0,
-	display: 'block'
-};
-
 const ExperienceItemEntry = ({ company, logo, dates, lengths, locations, roles, desc, highlights, borderType }) => {
   const [open, setOpen] = useState(false);	
 	return (
     <>
-		<Card border={borderType ? borderType : 'warning'}>
+		<Card border={borderType ? borderType : 'warning'}  style={{display: 'revert'}}>
       <Card.Header>
-        {company.map((c, index) => <p><AiOutlineCluster/>{c} - <AiOutlineEnvironment/>{locations[index]}</p>)}
+        <Image src={logo} style={{float: 'right'}}></Image>        
+        {company.map((c, index) => <p><AiOutlineCluster/>{c} - <AiOutlineEnvironment/>{locations[index]}</p>)}        
       </Card.Header>
 			<Card.Body>
 				<Card.Title >          
@@ -141,7 +139,7 @@ const generateArchivedExperienceItemEntry = () => {
 	const entries = [<Row><Col><h2>Previous</h2></Col></Row>];
 	for (let i = 1; i < data.length; i+=2) {
 		if (i+1 < data.length) {
-			entries.push(<Row><Col><ExperienceItemEntry {...data[i]} /></Col><Col><ExperienceItemEntry {...data[i+1]} /></Col></Row>)
+			entries.push(<Row><Col sm={12} lg={6}><ExperienceItemEntry {...data[i]} /></Col><Col sm={12} lg={6}><ExperienceItemEntry {...data[i+1]} /></Col></Row>)
 		} else {
 			entries.push(<Row><Col><ExperienceItemEntry {...data[i]} /></Col></Row>)
 		}
