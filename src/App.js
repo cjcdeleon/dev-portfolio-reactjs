@@ -10,23 +10,23 @@ const data = {
   navSections: [
     {
       name: "Summary",
-      component: SummaryContent 
+      component: SummaryContent
     },
     {
       name: "Experience",
-      component: ExperienceContent 
+      component: ExperienceContent
     },
     {
       name: "Expertise",
-      component: "" 
+      component: ""
     },
     {
       name: "Education",
-      component: "" 
+      component: ""
     },
     {
       name: "Contact Me",
-      component: "" 
+      component: ""
     },
   ]
 };
@@ -35,8 +35,8 @@ const App = () => (
   <Container>
     <Row>
       <Col>
-        <Navigation navSections={data.navSections.map(jo => jo.name)}/>
-      </Col>  
+        <Navigation navSections={data.navSections.map(jo => jo.name)} />
+      </Col>
     </Row>
     {/* 
     <Row>
@@ -49,12 +49,12 @@ const App = () => (
     */}
     <Row>
       <Col>
-        { data.navSections.map(jo => (
-					<Section sectionName={jo.name}>
-            { jo.component && React.createElement(jo.component) }
+        {data.navSections.map(jo => (
+          <Section sectionName={jo.name}>
+            { jo.component && React.createElement(jo.component)}
           </Section>
-					))
-				}
+        ))
+        }
       </Col>
     </Row>
   </Container>
