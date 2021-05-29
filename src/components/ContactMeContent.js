@@ -15,11 +15,11 @@ const ContactMeContent = ({ props }) => {
         </Col>
       </Row>
       <Row>
-        <Col lg={3} sm={12}>{' '}</Col>
-        <Col lg={3} sm={12}>
+        <Col lg={3} sm={12} md={0}>{' '}</Col>
+        <Col lg={3} sm={12} md={6}>
           <Image src={profile} responsive thumbnail />
         </Col>
-        <Col lg={3} sm={12}>
+        <Col lg={4} sm={12} md={6}>
           <ul style={{ listStyleType: 'none' }}>
             <li>
               <IoCallOutline size={42} />
@@ -46,7 +46,7 @@ const ContactMeContent = ({ props }) => {
             </li>
           </ul>
         </Col>
-        <Col lg={3} sm={12}>{' '}</Col>
+        <Col lg={2} sm={12} md={0}>{' '}</Col>
       </Row>
       <Row>
         <Col>
