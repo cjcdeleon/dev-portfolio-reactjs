@@ -6,6 +6,7 @@ import SummaryContent from './components/SummaryContent';
 import ExperienceContent from './components/ExperienceContent';
 import ExpertiseContent from './components/ExpertiseContent';
 import EducationContent from './components/EducationContent';
+import ContactMeContent from './components/ContactMeContent';
 import React from "react";
 
 const data = {
@@ -28,7 +29,7 @@ const data = {
     },
     {
       name: "Contact Me",
-      component: ""
+      component: ContactMeContent
     },
   ]
 };

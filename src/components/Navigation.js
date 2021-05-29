@@ -5,7 +5,7 @@ const Navigation = ({ navSections }) => {
 		<>
 			<Navbar bg="dark" variant="dark" expand="lg">
 				{/* http://www.pinyin.info/tools/converter/chars2uninumbers.html */}
-				<Navbar.Brand href="#about">
+				<Navbar.Brand href="#Contact%20Me">
 					<Button variant="danger">
 						{/*&#12459;&#12523;&#12525;&#12473; <Badge variant="light">&#30496;&#12356;&#38957;</Badge> */}
 					Carlos Jaime De Leon &#30496;&#12356;&#38957;
