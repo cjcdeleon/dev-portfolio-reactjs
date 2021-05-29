@@ -5,6 +5,7 @@ import Section from './components/Section';
 import SummaryContent from './components/SummaryContent';
 import ExperienceContent from './components/ExperienceContent';
 import ExpertiseContent from './components/ExpertiseContent';
+import EducationContent from './components/EducationContent';
 import React from "react";
 
 const data = {
@@ -23,7 +24,7 @@ const data = {
     },
     {
       name: "Education",
-      component: ""
+      component: EducationContent
     },
     {
       name: "Contact Me",
