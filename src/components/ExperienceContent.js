@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Row, Col, Card, Button, Collapse, Image } from 'react-bootstrap';
 import { AiOutlineCluster, AiOutlineUser, AiOutlineCalendar, AiOutlineCalculator, AiOutlineEnvironment, AiOutlineCheckSquare } from 'react-icons/ai';
+import { RiAlarmWarningLine, RiArchiveLine } from 'react-icons/ri';
 import azeusLogo from '../images/azeus.png';
 import sunlifeLogo from '../images/sunlife.jfif';
 import macquarieLogo from '../images/macquarie.jfif';
@@ -14,7 +15,7 @@ const data = [
     "company": "Suncorp Group",
     "logo": suncorpLogo,
     "dates": ["05/2019 - Present"],
-    "lengths": ["2years"],
+    "lengths": ["2yrs"],
     "locations": "AU",
     "roles": "Software Engineer (w/ Devops)",
     "desc": "Building and continually enhancing Insurance Sales Apps to enable customers to get a quote and buy motor, home, health and business insurance. Finally for the first time in my career, able to use cool new tech stack: ReactJS + Redux, Groovy and Jenkins Pipeline, Ansible, AWS EC2/S3/Cloudformation and Openshift.",
@@ -29,7 +30,7 @@ const data = [
     "company": "ANZ Bank",
     "logo": anzLogo,
     "dates": ["01/2017 - 05/2019"],
-    "lengths": ["11months"],
+    "lengths": ["2yrs 4mons"],
     "locations": "AU",
     "roles": "Java SQL Vaadin Developer",
     "desc": "Worked on a Risk data aggregation + calculation web app built with Spring Boot partitioned as Microservices, SQL Server 2008, Java 8 and Vaadin 7 for UI.",
@@ -44,7 +45,7 @@ const data = [
     "company": "Tyro Payments",
     "logo": tyroLogo,
     "dates": ["10/2017 - 11/2017"],
-    "lengths": ["1.5months"],
+    "lengths": ["1.5mons"],
     "locations": "AU",
     "roles": "Java Web Developer",
     "desc": "Took a huge risk & ventured the world of strict full-time pair-programming (wholeday, everyday). Unfortunately, full-time pairing took its toll and I was unable to perform at full capacity.",
@@ -57,24 +58,24 @@ const data = [
     "company": "Macquarie Group",
     "logo": macquarieLogo,
     "dates": ["04/2010 - 01/2016", "04/2016 - 10/2016"],
-    "lengths": ["5years 9months", "7months"],
+    "lengths": ["5yrs 9mons", "7mons"],
     "locations": "PH,AU",
     "roles": "Java SQL ExtJS Unix Developer",
-    "desc": "Worked on Java Web apps developed with Spring, Hibernate, jQuery, ExtJS for Macquarie's risk management department. Over 6 years, primarily worked in Java however had exposure to a variety of technologies such as: maintaining legacy reports & jobs written in SQL + Unix, writing ad-hoc SQL scripts, integrating, customizing and deploying vendor products. Last project was a greenfield app for trade lifecycle reporting which was built on Spring Boot, Microservices, MarkLogic (NoSQL), ReactJS and Bootstrap.",
+    "desc": "Worked on Java Web apps developed with Spring, Hibernate, jQuery, ExtJS for Macquarie's risk management department. Over 6 yrs, primarily worked in Java however had exposure to a variety of technologies such as: maintaining legacy reports & jobs written in SQL + Unix, writing ad-hoc SQL scripts, integrating, customizing and deploying vendor products. Last project was a greenfield app for trade lifecycle reporting which was built on Spring Boot, Microservices, MarkLogic (NoSQL), ReactJS and Bootstrap.",
     "highlights": [
       "promoted to Manager on Apr 2013",
       "awarded on March 2012 with 'RMG Awards: Delivery and Drive' for singlehandedly analyzing / developing the fix for the bank's integration errors due to ASIC's regulatory webservice upgrade and providing manual workaround that prevented regulatory breach and penalties",
       "awarded on November 2012 with 'RMG Awards: Delivery and Drive' for successfully leading / delivering a major development project on schedule even with understaffed team (3 members)",
       "awarded on May 2014 with 'RMG Awards: Client Commitment, Highest Standards, Delivery and Drive' for successfully implementing the IT solutions as envisioned by business users thereby realizing the efficiency gains in business process, if not going beyond expectations",
       "managed and deployed the upgrade of vendor application Actimize Risk Case Manager (RCM); it was highly successful as compared to previous upgrades which had numerous post production issues",
-      "member of the pioneer dev team for Sailpoint IIQ (IAM) that was deployed to  AU for 5 months; assigned as lead customized reports and connector developer; success of this project paved to growth of hiring developers in Manila"
+      "member of the pioneer dev team for Sailpoint IIQ (IAM) that was deployed to  AU for 5 mons; assigned as lead customized reports and connector developer; success of this project paved to growth of hiring developers in Manila"
     ]
   },
   {
     "company": "Sun Life Financial",
     "logo": sunlifeLogo,
     "dates": ["04/2007 - 04/2010"],
-    "lengths": ["3years"],
+    "lengths": ["3yrs"],
     "locations": "PH",
     "roles": "Java Struts SQL Developer",
     "desc": "Worked as a Java, Web and SQL Developer who implemented business requirements that revolve in insurance domain. Primarily used Spring, Struts, Hibernate but also worked on maintaining legacy apps written in plain JSP + Servlets + JDBC and a Point-of-Sale (POS) payment gateway.",
@@ -89,7 +90,7 @@ const data = [
     "company": "Azeus Systems PH Ltd",
     "logo": azeusLogo,
     "dates": ["06/2006 - 11/2006"],
-    "lengths": ["6months"],
+    "lengths": ["6mons"],
     "locations": "PH",
     "roles": "Junior Developer",
     "desc": "Worked as a Java Junior Developer under the tutelage of senior mentors for this CMMI Level-5 software firm",
@@ -108,7 +109,7 @@ const ExperienceItemEntry = ({ company, logo, dates, lengths, locations, roles, 
         <Card.Header as="h5">
           <Image src={logo} style={{ float: 'right' }}></Image>
           <p>
-            <AiOutlineCluster />{company} - <AiOutlineEnvironment />{locations.split(',').map(l => <span>{l}<Flag country={l} size={25} /> </span>)}
+            <AiOutlineCluster />{company} - <AiOutlineEnvironment />{locations.split(',').map(l => <span>{l}<Flag country={l} size={28} /> </span>)}
           </p>
         </Card.Header>
         <Card.Body>
@@ -139,7 +140,7 @@ const ExperienceItemEntry = ({ company, logo, dates, lengths, locations, roles, 
 };
 
 const generateArchivedExperienceItemEntry = () => {
-  const entries = [<Row><Col><h2>Previous</h2></Col></Row>];
+  const entries = [<Row><Col><h2 style={{ textAlign: 'center', verticalAlign: 'center' }} className="bg-warning"><RiArchiveLine/>Previous</h2></Col></Row>];
   for (let i = 1; i < data.length; i += 2) {
     if (i + 1 < data.length) {
       entries.push(<Row><Col sm={12} lg={6}><ExperienceItemEntry {...data[i]} /></Col><Col sm={12} lg={6}><ExperienceItemEntry {...data[i + 1]} /></Col></Row>)
@@ -154,7 +155,7 @@ const ExperienceContent = ({ props }) => {
     <>
       <Row>
         <Col>
-          <h2>Current</h2>
+          <h2 style={{ textAlign: 'center', verticalAlign: 'center' }} className="bg-success"><RiAlarmWarningLine/>Current</h2>
           <ExperienceItemEntry {...data[0]} borderType="success" />
         </Col>
       </Row>
